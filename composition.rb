@@ -7,6 +7,7 @@ class Engine
     end
 end
 class Tyres
+
     def initialize(no_of_tyres)
         @no_of_tyres = no_of_tyres
     end
