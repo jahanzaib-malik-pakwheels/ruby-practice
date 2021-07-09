@@ -12,12 +12,12 @@ class Product
 
     # initialize a Product object using a data hash
     def initialize(product_data = {})
-    @id = product_data['id']
-    @title = product_data['title']
-    @location = product_data['location']
-    @summary = product_data['summary']
-    @url = product_data['url']
-    @price = product_data['price']
+        @id = product_data['id']
+        @title = product_data['title']
+        @location = product_data['location']
+        @summary = product_data['summary']
+        @url = product_data['url']
+        @price = product_data['price']
     end
 
     # return an array of Product objects
@@ -28,21 +28,19 @@ class Product
     def self.sample_locations
         @products = []
         LOCATIONS.each do |location|
-        @products.push DATA.select { |product| product['location'] == location }.sample
+        @products.push self.all.select { |product| product.location == location }.sample
     end
     return @products
     end 
 
-    def self.find_by_location(location_to_find="")
-        @products = []
-        @products.push DATA.select { |product| product['location'] == location_to_find }
-        return @products
+    def self.find_by_location(location_to_find)
+        self.all.select { |product| product.location == location_to_find }
     end
 
-    def find(product_id)
-        DATA.select { |product| product['id'] == product_id }.first
+    def self.find(product_id)
+        Product.all.select { |product| product.id == product_id }.first
     end
     
 end 
 
-#print Product.new.find(4)
+print Product.find_by_location("canada")
