@@ -1,0 +1,5 @@
+source 'https://rubygems.org'
+
+gem 'httparty'
+gem 'sinatra', '~> 1.4', '>= 1.4.7'
+gem 'json'
