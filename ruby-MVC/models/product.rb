@@ -43,4 +43,4 @@ class Product
     
 end 
 
-print Product.find_by_location("canada")
+#print Product.find_by_location("canada")
