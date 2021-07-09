@@ -1,9 +1,9 @@
 class Person
-    def talk()
+    def talk
         puts "Hello i am talking to you"
     end
 
-    def run()
+    def run
         puts "Hello i am running"
     end
 end

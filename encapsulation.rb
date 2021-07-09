@@ -5,7 +5,7 @@ class Document
     def set_name(new_name)
         @name = new_name
     end
-    def get_name()
+    def get_name
         @name
     end
 end

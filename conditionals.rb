@@ -11,7 +11,7 @@ end
 
 grade = "B+"
 
-case(grade)
+case grade
 when "A" , "A+" , "A-"
     puts "Perfect"
 when "B" ,"B+"

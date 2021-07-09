@@ -22,14 +22,14 @@ class Car
         @engine = engine
         @tyres = tyres
     end
-    def get_details()
+    def get_details
         puts "Car Engine has #{engine.get_parts_count} parts"
         puts "Car has #{tyres.get_tyres_count} tyres"
     end
 end
 
-engine = Engine.new(5)
-tyres = Tyres.new(4)
+engine = Engine.new 5
+tyres = Tyres.new 4
 
 car = Car.new(engine,tyres)
 car.get_details

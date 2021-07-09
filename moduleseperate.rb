@@ -1,11 +1,11 @@
 module BigSample
     class SampleA
-        def initialize()
+        def initialize
             puts "Sample A"
         end
     end
     class SampleB
-        def initialize()
+        def initialize
             puts "Sample B"
         end
     end
