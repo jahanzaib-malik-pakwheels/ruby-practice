@@ -2,13 +2,6 @@
 
 <h2>Our blog has <%= Article.public_count %> articles and counting!</h2>
 
-
-<ul>
-    <% @articles.each {|article|%>
-        <% unless article.archived?%>
-            <li><%= link_to article.title , article %></li>
-        <% end %>
-    <% } %>
-</ul>
+<%= render 'articles' %>
 
 <h3><%= link_to 'Create New Article' , new_article_path %></h3>
